@@ -1,3 +1,6 @@
+## Diagrama de secuencia: creación de una nueva nota en la página
+
+```mermaid
 sequenceDiagram
     participant browser
     participant server
