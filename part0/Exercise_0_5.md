@@ -1,4 +1,4 @@
-## Diagrama de secuencia: creación de una nueva nota en la página:
+## Diagrama de secuencia: Acceso a la página:
 ## https://studies.cs.helsinki.fi/exampleapp/spa
 ```mermaid
 sequenceDiagram
