@@ -1,5 +1,5 @@
-## Diagrama de secuencia: creación de una nueva nota en la página
-## https://studies.cs.helsinki.fi/exampleapp/notes
+## Diagrama de secuencia: creación de una nueva nota en la página:
+# https://studies.cs.helsinki.fi/exampleapp/notes
 
 ```mermaid
 sequenceDiagram
