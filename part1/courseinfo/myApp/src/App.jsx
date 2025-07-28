@@ -9,12 +9,28 @@ const Header = (props) => {
   )
 }
 
-const Content = (props) =>{
-  console.log("Si ves esto es porque el Content funciona correctamente")
+const Part = (props) =>{
+  console.log("Si ves esto es porque el Part funciona correctamente")
   return(
     <p>
       {props.part} {props.excercises}
     </p>
+  )
+}
+
+const Content = (props) =>{
+  console.log("Si ves esto es porque el Content funciona correctamente")
+  /*
+    Aquí también se puede encapsular con <div></div>, sin embargo, mejor no hacerlo
+    porque esto puede romper estilos que dependan de la estructura DOM
+  */
+  return(
+    <>
+      <Part part={props.parts[0]} excercises={props.excercises[0]}/>
+      <Part part={props.parts[1]} excercises={props.excercises[1]}/>
+      <Part part={props.parts[2]} excercises={props.excercises[2]}/>
+    </>
+    
   )
 }
 
@@ -35,13 +51,11 @@ const App = () => {
   const exercises2 = 7
   const part3 = 'State of a component'
   const exercises3 = 14
-
+  //Paso una estructura de datos tipo lista como prop
   return (
     <div>
       <Header course={course}/>
-      <Content part={part1} excercises={exercises1}/>
-      <Content part={part2} excercises={exercises2}/>
-      <Content part={part3} excercises={exercises3}/>
+      <Content parts={[part1,part2,part3]} excercises={[exercises1,exercises2,exercises3]}/>
       <Total excercises={exercises1+exercises2+exercises3}/>
     </div>
   )
