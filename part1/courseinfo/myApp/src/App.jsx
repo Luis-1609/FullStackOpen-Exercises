@@ -18,6 +18,15 @@ const Content = (props) =>{
   )
 }
 
+const Total = (props) => {
+  console.log("Si ves esto es porque el Total funciona correctamente")
+  return(
+    <p>
+      Number of exercises {props.excercises}
+    </p>
+  )
+}
+
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -33,7 +42,7 @@ const App = () => {
       <Content part={part1} excercises={exercises1}/>
       <Content part={part2} excercises={exercises2}/>
       <Content part={part3} excercises={exercises3}/>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Total excercises={exercises1+exercises2+exercises3}/>
     </div>
   )
 }
